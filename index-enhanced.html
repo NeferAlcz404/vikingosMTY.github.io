@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIKINGOS-MTY - Tu Tienda de Comida Favorita</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-enhanced-colors-verde-negro-amarillo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- ANIMACION -->
+    <div class="animated-bg">
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <!-- Enhanced Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-fire"></i>
+                    <span>VIKINGOS-MTY</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Inicio</a></li>
+                    <li><a href="#products" class="nav-link">Menú</a></li>
+                    <li><a href="#inventory" class="nav-link">Inventario</a></li>
+                    <li><a href="#sales" class="nav-link">Ventas</a></li>
+                    <li><a href="#ticket" class="nav-link">Ticket</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SECCION DE INICIO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="text-gradient">¡Bienvenido a VIKINGOS-MTY!</span>
+                </h1>
+                <p class="hero-subtitle">Los mejores combos y snacks de Monterrey, al mejor precio</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-fire"></i>
+                        <span>Combos Calientes</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Entrega Rápida</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-star"></i>
+                        <span>Calidad Premium</span>
+                    </div>
+                </div>
+                <button class="cta-button" onclick="scrollToSection('products')">
+                    <span>Ver Menú</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-element combo">
+                        <i class="fas fa-hamburger"></i>
+                        <span>Combos</span>
+                    </div>
+                    <div class="floating-element hotdog">
+                        <i class="fas fa-hotdog"></i>
+                        <span>Hot Dogs</span>
+                    </div>
+                    <div class="floating-element snack">
+                        <i class="fas fa-cookie-bite"></i>
+                        <span>Snacks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DE CADA SECCION -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="text-gradient">Nuestro Menú</span>
+                <span class="subtitle">Descubre nuestros productos más populares</span>
+            </h2>
+            <div class="products-grid" id="products-grid">
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACCION CON LOS PRODUCTOS -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Clientes Felices</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Productos Disponibles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-label">Entrega 24/7</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-label">Calidad Garantizada</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION DE INVENTARIO -->
+    <section id="inventory" class=
+    "inventory-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="text-gradient">Gestión de Inventario</span>
+                <span class="subtitle">Administra tu stock de productos</span>
+            </h2>
+            <div class="inventory-controls">
+                <button class="btn-primary" onclick="showAddProductForm()">
+                    <i class="fas fa-plus"></i> Agregar Producto
+                </button>
+                <button class="btn-secondary" onclick="showInventoryList()">
+                    <i class="fas fa-list"></i> Ver Inventario
+                </button>
+            </div>
+            
+            <!-- PARA AGREGAR PRODUCTO -->
+            <div id="add-product-form" class="form-container" style="display: none;">
+                <h3>Agregar Nuevo Producto</h3>
+                <form id="product-form">
+                    <div class="form-group">
+                        <label>Nombre del Producto:</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Precio:</label>
+                        <input type="number" id="product-price" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Cantidad en Stock:</label>
+                        <input type="number" id="product-stock" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Categoría:</label>
+                        <select id="product-category">
+                            <option value="combos">Combos</option>
+                            <option value="hotdogs">Hot Dogs</option>
+                            <option value="salchipapas">Salchipapas</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="especiales">Especiales</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>URL de Imagen:</label>
+                        <input type="url" id="product-image" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción:</label>
+                        <textarea id="product-description" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Agregar Producto</button>
+                </form>
+            </div>
+
+            <!-- LISTA PARA EL INVENTARIO -->
+            <div id="inventory-list" class="inventory-table" style="display: none;">
+                <h3>Inventario Actual</h3>
+                <table id="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-tbody">
+                        <!-- DATOS DEL INVENTARO -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION DE PAGO -->
+    <section id="sales" class="sales-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="text-gradient">Punto de Venta</span>
+                <span class="subtitle">Procesa tus ventas rápidamente</span>
+            </h2>
+            <div class="sales-container">
+                <div class="cart-section">
+                    <h3>Carrito de Compras</h3>
+                    <div id="cart-items">
+                        <!-- CARTA PARA LOS PRODUCTOD -->
+                    </div>
+                    <div class="cart-total">
+                        <strong>Total: $<span id="cart-total">0.00</span></strong>
+                    </div>
+                    <button class="btn-primary" onclick="proceedToCheckout()">
+                        <i class="fas fa-cash-register"></i> Procesar Venta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION DE TICKET -->
+    <section id="ticket" class="ticket-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="text-gradient">Ticket de Compra</span>
+                <span class="subtitle">Genera tickets profesionales</span>
+            </h2>
+            <div id="ticket-container" class="ticket-container" style="display: none;">
+                <div class="ticket-header">
+                    <h3>VIKINGOS-MTY</h3>
+                    <p>RUC: 12345678901</p>
+                    <p>Dirección: Av. Gonzalitos #123, Monterrey</p>
+                    <p>Tel: 555-1234</p>
+                </div>
+                <div class="ticket-details">
+                    <p><strong>Fecha:</strong> <span id="ticket-date"></span></p>
+                    <p><strong>Hora:</strong> <span id="ticket-time"></span></p>
+                    <p><strong>Cajero:</strong> <span id="ticket-cashier">Juan Pérez</span></p>
+                </div>
+                <div class="ticket-items">
+                    <table id="ticket-items-table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cant.</th>
+                                <th>P. Unit</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ticket-items-body">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ticket-total">
+                    <p><strong>Subtotal:</strong> $<span id="ticket-subtotal">0.00</span></p>
+                    <p><strong>IGV (18%):</strong> $<span id="ticket-igv">0.00</span></p>
+                    <p><strong>Total:</strong> $<span id="ticket-final-total">0.00</span></p>
+                </div>
+                <div class="ticket-payment">
+                    <p><strong>Método de Pago:</strong> <span id="ticket-payment-method"></span></p>
+                    <p><strong>Pago con:</strong> $<span id="ticket-payment-amount">0.00</span></p>
+                    <p><strong>Cambio:</strong> $<span id="ticket-change">0.00</span></p>
+                </div>
+                <div class="ticket-footer">
+                    <p>¡Gracias por su compra!</p>
+                    <p>Vuelva pronto</p>
+                </div>
+                <button class="btn-primary" onclick="printTicket()">
+                    <i class="fas fa-print"></i> Imprimir Ticket
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARGA DE ARCHIVOS DEL SCRIPT-ENHANCED -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Cargando...</p>
+        </div>
+    </div>
+
+    <script src="script-enhanced-fixed.js"></script>
+</body>
+</html>
