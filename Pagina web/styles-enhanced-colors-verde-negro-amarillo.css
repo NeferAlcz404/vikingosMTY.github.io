@@ -1,0 +1,464 @@
+/* VIKINGOS-MTY - Enhanced Color Scheme Extension - VERDE, NEGRO Y AMARILLO */
+/* Paleta de colores: Verde (#27ae60), Negro (#000000), Amarillo (#ffd700) */
+
+:root {
+    /* Colores principales - VERDE, NEGRO Y AMARILLO */
+    --primary-green: #27ae60;
+    --primary-black: #000000;
+    --primary-yellow: #ffd700;
+    
+    /* Colores secundarios y acentos */
+    --secondary-green: #2ecc71;
+    --secondary-black: #1a1a1a;
+    --secondary-yellow: #ffed4e;
+    
+    /* Colores de apoyo */
+    --accent-green: #58d68d;
+    --accent-yellow: #fff700;
+    --dark-green: #1e8449;
+    
+    /* Colores neutros */
+    --background-light: #f8fff8;
+    --surface-white: #ffffff;
+    --text-dark: #000000;
+    --text-medium: #333333;
+    --text-light: #666666;
+    
+    /* Gradients con la nueva paleta */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green), var(--primary-black));
+    --gradient-secondary: linear-gradient(135deg, var(--primary-yellow), var(--primary-green));
+    --gradient-hero: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-black) 50%, var(--primary-yellow) 100%);
+    --gradient-card: linear-gradient(145deg, #ffffff, #f8fff8);
+    
+    /* Sombras y efectos */
+    --shadow-green: 0 4px 20px rgba(39, 174, 96, 0.3);
+    --shadow-yellow: 0 4px 20px rgba(255, 215, 0, 0.3);
+    --shadow-black: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced modal styling with green/black/yellow theme */
+.modal-content {
+    background: linear-gradient(135deg, var(--surface-white), var(--background-light));
+    border: 2px solid var(--primary-green);
+    box-shadow: var(--shadow-green);
+}
+
+.modal-content h3 {
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced tab styling for white background sections */
+.products-section,
+.inventory-section,
+.sales-section,
+.ticket-section {
+    background: linear-gradient(135deg, var(--surface-white), var(--background-light));
+    border: 1px solid var(--primary-green);
+    border-radius: 15px;
+    box-shadow: var(--shadow-green);
+}
+
+/* Enhanced form containers */
+.form-container,
+.cart-section,
+.ticket-container {
+    background: linear-gradient(135deg, var(--surface-white), var(--background-light));
+    border: 2px solid var(--primary-green);
+    border-radius: 15px;
+    box-shadow: var(--shadow-green);
+}
+
+/* Enhanced buttons */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    color: white;
+    border: 2px solid var(--primary-yellow);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--primary-yellow), var(--secondary-yellow));
+    color: var(--primary-black);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-yellow);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--primary-black), var(--secondary-black));
+    color: white;
+    border: 2px solid var(--primary-green);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-green);
+}
+
+/* Enhanced payment buttons */
+.payment-btn {
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    color: white;
+    border: 2px solid var(--primary-yellow);
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.payment-btn:hover {
+    background: linear-gradient(135deg, var(--primary-yellow), var(--secondary-yellow));
+    color: var(--primary-black);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-yellow);
+}
+
+/* Enhanced table styling */
+.inventory-table th {
+    background: var(--primary-green);
+    color: white;
+    font-weight: 600;
+}
+
+.inventory-table tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+/* Enhanced cart styling */
+.cart-section {
+    background: linear-gradient(135deg, var(--surface-white), var(--background-light));
+    border: 2px solid var(--primary-green);
+    box-shadow: var(--shadow-green);
+}
+
+.cart-total {
+    color: var(--primary-yellow);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Enhanced ticket styling */
+.ticket-container {
+    background: linear-gradient(135deg, var(--surface-white), var(--background-light));
+    border: 2px solid var(--primary-black);
+    box-shadow: var(--shadow-black);
+}
+
+.ticket-header {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.ticket-total {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+/* Enhanced modal styling */
+.modal-content {
+    background: linear-gradient(135deg, var(--surface-white), var(--background-light));
+    border: 2px solid var(--primary-green);
+    box-shadow: var(--shadow-green);
+}
+
+.modal-content h3 {
+    color: var(--primary-green);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Enhanced close button */
+.close {
+    color: var(--primary-black);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--primary-yellow);
+}
+
+/* Enhanced form inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    border: 2px solid var(--primary-green);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .payment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .payment-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Fondo animado con la nueva paleta */
+body {
+    background: var(--gradient-hero);
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header mejorado con nueva paleta */
+.header {
+    background: var(--gradient-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-black);
+}
+
+.navbar {
+    background: transparent;
+}
+
+.logo {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+.nav-link {
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-yellow);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+/* Hero section con nueva paleta */
+.hero {
+    background: var(--gradient-hero);
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.hero h1 {
+    background: linear-gradient(45deg, var(--primary-yellow), var(--primary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    color: var(--primary-yellow);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: var(--primary-yellow);
+    color: var(--primary-black);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Product cards con nueva paleta */
+.product-card {
+    background: var(--surface-white);
+    border: 1px solid var(--primary-green);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-green);
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    border-color: var(--primary-yellow);
+    box-shadow: var(--shadow-yellow);
+    transform: translateY(-5px);
+}
+
+.product-price {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+.add-to-cart {
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.add-to-cart:hover {
+    background: var(--primary-yellow);
+    color: var(--primary-black);
+}
+
+/* Formularios con nueva paleta */
+.form-container {
+    background: var(--surface-white);
+    border: 2px solid var(--primary-green);
+    border-radius: var(--border-radius);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+/* Tablas con nueva paleta */
+.inventory-table {
+    background: var(--surface-white);
+    border: 1px solid var(--primary-green);
+    border-radius: var(--border-radius);
+}
+
+.inventory-table th {
+    background: var(--primary-green);
+    color: white;
+}
+
+.inventory-table tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+}
+
+/* Carrito con nueva paleta */
+.cart-section {
+    background: var(--surface-white);
+    border: 1px solid var(--primary-yellow);
+    border-radius: var(--border-radius);
+}
+
+.cart-total {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+/* Ticket con nueva paleta */
+.ticket-container {
+    background: var(--surface-white);
+    border: 2px solid var(--primary-black);
+    border-radius: var(--border-radius);
+}
+
+.ticket-header {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.ticket-total {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+/* Botones de acción */
+.btn-primary {
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-yellow);
+    color: var(--primary-black);
+}
+
+.btn-secondary {
+    background: var(--primary-black);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-yellow);
+    color: var(--primary-black);
+}
+
+/* Estados y animaciones */
+.status-active {
+    color: var(--primary-green);
+    background: rgba(39, 174, 96, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+}
+
+.status-inactive {
+    color: var(--primary-black);
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
